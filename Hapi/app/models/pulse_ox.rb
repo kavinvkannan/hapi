@@ -1,0 +1,2 @@
+class PulseOx < ApplicationRecord
+end

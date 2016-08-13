@@ -1,0 +1,2 @@
+class Bp < ApplicationRecord
+end

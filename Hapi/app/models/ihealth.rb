@@ -1,0 +1,2 @@
+class Ihealth < ApplicationRecord
+end
