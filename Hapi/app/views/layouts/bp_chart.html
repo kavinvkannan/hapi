@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('date', 'Date');
+      data.addColumn('number', 'Systolic');
+      data.addColumn('number', 'Diastolic');
+      // data.addColumn('number', 'Transformers: Age of Extinction');
+      //
+      // data.addRows([
+      //   [1,  37.8, 80.8, 41.8],
+      //   [2,  30.9, 69.5, 32.4],
+      //   [3,  25.4,   57, 25.7],
+      //   [4,  11.7, 18.8, 10.5],
+      //   [5,  11.9, 17.6, 10.4],
+      //   [6,   8.8, 13.6,  7.7],
+      //   [7,   7.6, 12.3,  9.6],
+      // ]);
+
+// receive JSON object
+// convert to hash to array: date, number, number
+// take last 7 points (days) and populate to graph
+
+
+
+// loop-- for each data point, put on graph, and repeat, until 7 points, most recent
+
+
+      data.addRows([
+        [new Date(2016, 7, 13),  135, 88],
+        [new Date(2016, 7, 14),  134, 87],
+        [new Date(2016, 7, 15),  129,  86],
+        [new Date(2016, 7, 16),  120, 79],
+        [new Date(2016, 7, 17),  125, 83],
+        [new Date(2016, 7, 18),   115, 80],
+        [new Date(2016, 7, 19),   123, 85],
+      ]);
+
+
+      var options = {
+        chart: {
+          title: 'Blood pressure reading data for the week',
+        },
+        width: 900,
+        height: 500
+      };
+
+      var chart = new google.charts.Line(document.getElementById('linechart_material'));
+
+      chart.draw(data, options);
+    }
+    </script>
+    <title></title>
+  </head>
+  <body>
+    <div id="linechart_material" style="width: 900px; height: 500px"></div>
+  </body>
+</html>
