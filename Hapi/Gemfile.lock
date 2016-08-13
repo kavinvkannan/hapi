@@ -53,6 +53,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.14)
+    fitgem (0.12.1)
+      oauth
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     httparty (0.14.0)
@@ -84,6 +86,7 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    oauth (0.5.1)
     pkg-config (1.1.7)
     puma (3.6.0)
     rack (2.0.1)
@@ -160,6 +163,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
+  fitgem
   httparty
   jbuilder (~> 2.5)
   jquery-rails
