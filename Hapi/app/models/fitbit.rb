@@ -1,0 +1,4 @@
+class Fitbit < ApplicationRecord
+
+	
+end
